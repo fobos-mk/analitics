@@ -4,7 +4,7 @@ import json
 from analys import analitics as anal
 from sender import responce
 
-hostname = "rabbitmq"    # Ip сервера
+hostname = "89.108.70.10"    # Ip сервера
 port = 5672                     # Порт
 ReciveQueue = "DownStream"      # Поток получения
 ResponceQueue = "UpStream"      # Поток отправки
