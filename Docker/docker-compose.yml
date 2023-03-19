@@ -1,0 +1,19 @@
+version: "3.2"
+services:
+  app:
+    build:
+      context: ../
+      dockerfile: Docker/Dockerfile
+    container_name: analitics-service
+    tty: true
+    env_file:
+      - .env
+    deploy:
+      resources:
+        limits:
+          cpus: "0.10"
+          memory: "256M"
+        reservations:
+          cpus: "0.10"
+          memory: "128M"
+    restart: unless-stopped
