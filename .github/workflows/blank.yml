@@ -29,12 +29,11 @@ jobs:
           host: ${{ secrets.HOST }}
           port: ${{ secrets.PORT }}
           username: ${{ secrets.USERNAME }}
-          key: ${{ secrets.KEY }}
-          passphrase: ${{ secrets.PASSPHRASE }}
+          password: ${{ secrets.PASSWORD }}
           command_timeout: 20m
           envs: HOST
           script: |
-            cd RamScanner
+            cd service
             git pull https://${{secrets.PAT}}@github.com/NullHeads/analitics.git main
             cd Docker
             echo "${{secrets.PASS}}" | sudo -S docker-compose up -d --build
