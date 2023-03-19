@@ -17,3 +17,9 @@ services:
           cpus: "0.10"
           memory: "128M"
     restart: unless-stopped
+    networks:
+      - app
+    
+networks:
+  app:
+    driver: bridge
