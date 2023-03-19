@@ -4,7 +4,7 @@ import json
 from analys import analitics as anal
 from sender import responce
 
-hostname = os.getenv('HOST')    # Ip сервера
+hostname = "localhost"    # Ip сервера
 port = 5672                     # Порт
 ReciveQueue = "DownStream"      # Поток получения
 ResponceQueue = "UpStream"      # Поток отправки
